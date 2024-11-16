@@ -11,20 +11,30 @@
 
 let clickedImg = document.querySelector(".click-img");
 let clickTxt = document.querySelector(".click-text");
-let leftHeart = document.querySelector(".left-heart");
-let rightHeart = document.querySelector(".right-heart");
+let letfDoor = document.querySelector(".left-door");
+let rightDoor= document.querySelector(".right-door");
+let heart =document.querySelector(".heart");
+let heartImage = document.querySelector(".click-text img");
 
-document.addEventListener("click", (e) => {
+heart.addEventListener("click", (e) => {
     if (!e.target.classList.contains(".bg-image")) {
         $('.main-content').removeClass('d-none');
-        clickTxt.style.top = "0";
-        leftHeart.style.width = "0";
-        rightHeart.style.width = "0";
+        heartImage.classList.add("ballon-active")
+        heart.play();
+        clickTxt.style.top = "-600px";
+        letfDoor.style.width = "48%";
+        rightDoor.style.width = "48%";
+        document.getElementById("my_audio").play();
         setInterval(function () {
-            clickedImg.remove();
-            document.getElementById("my_audio").play();
+            letfDoor.classList.add("active");
+            rightDoor.classList.add("active");
+            // letfDoor.style.width = "0";
+            // rightDoor.style.width = "0";
+            setInterval(function(){
+                clickedImg.remove();
+            },1000)
             $('.sakura-falling').removeClass('d-none');
-        }, 550)
+        }, 2000)
 
 
 

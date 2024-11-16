@@ -41,14 +41,18 @@
 <body >
    <div class="click-img bg-image">
       <div class="click-text">
-         <h1>click on heart</h1>
+         <img src="./assets/img/heart-ballon.png" alt="heart-ballon">
+         <h1>Touch heart</h1>
       </div>
-      <div class="left-heart heart">
-         <img src="./assets/img/left-half-heart.png" alt="left-heart">
-      </div>
-      <div class="right-heart heart">
-         <img src="./assets/img/right-half-heart.jpg.png" alt="right-heart">
-      </div>
+      <dotlottie-player class="heart"
+       src="https://lottie.host/f3369732-5853-472d-82b6-486a2da59235/xFgFLPwVU9.json"
+      background="transparent" speed="1" style="width: 600px; height: 600px;" ></dotlottie-player>
+
+      <div class="left-door"></div>
+      <div class="right-door"></div>
+
+
+
    </div>
    <!-- partial:index.partial.html -->
    <div class="sakura-falling d-none"></div>
@@ -93,6 +97,7 @@
    <!-- partial -->
    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
    <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
    <script src="./js/script.js"></script>
 </body>
 

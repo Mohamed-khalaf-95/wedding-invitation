@@ -404,120 +404,95 @@ body {
 .click-img {
 	width: 100%;
 	height: 100vh;
-	background-color: #fff;
 	position: relative;
 	cursor: pointer;
 	z-index: 9999999;
 }
 
-/* .bg-image {
-	background: url('../assets/img/clickme.jpg');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-} */
+.heart {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+
+@media(max-width:767px) {
+	.heart {
+		width: 400px !important;
+		height: 400px !important;
+	}
+}
+
 .click-text {
+	width: 100%;
 	text-align: center;
 	text-transform: capitalize;
-	color: #fff;
-	position: absolute;
-	left: 50%;
-	top: 45%;
-	transform: translate(-50%, -50%);
-	transition: .5s linear;
-	z-index: 99999;
-}
-
-.click-img .left-heart {
 	position: absolute;
 	left: 0;
+	top: 150px;
+	transition: 2s linear;
+	z-index: 99999;
+	
+}
+.click-text .active{
 	top: 0;
-	width: 100%;
+}
+.click-text h1 {
+	font-size: 35px;
+	background: linear-gradient(#874da2 0%, #c43a30 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.click-text img{
+	position: relative;
+	min-width: 200px;
+	height: 0;
+	top: 30px;
+	transition: .3s linear;
+}
+.click-text .ballon-active{
+	height: 200px;
+}
+.click-img .left-door,
+.click-img .right-door {
+	/* background-color: #674ea7; */
+	/* background: linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+	/* background-image: linear-gradient( #874da2 0%, #c43a30 100%); */
+	background-image: linear-gradient(#93a5cf 0%, #e4efe9 100%);
+	position: absolute;
+	top: 0;
+	width: 51%;
 	height: 100%;
 	transition: .5s linear;
+	/* ------------------------------ */
+	transition: transform 0.7s linear;
+	-webkit-transition: transform 0.7s linear;
+	-moz-transition: transform 0.7s linear;
+	-ms-transition: transform 0.7s linear;
+	-o-transition: transform 0.7s linear;
+	transform: rotatey(0deg);
+	-webkit-transform: rotatey(0deg);
+	-moz-transform: rotatey(0deg);
+	-ms-transform: rotatey(0deg);
+	-o-transform: rotatey(0deg);
+	transform: perspective(400px);
 }
 
-.click-img .left-heart img {
-	min-width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 16px;
+.click-img .active {
+	transform: rotatey(90deg);
+
 }
 
-.click-img .right-heart {
-	background-color: transparent;
-	position: absolute;
+.click-img .left-door {
+	transform-origin: left top;
+	left: 0;
+}
+
+.click-img .right-door {
+	transform-origin: right top;
 	right: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	transition: .5s linear;
-}
-
-.click-img .right-heart img {
-	min-width: 100%;
-	height: 100%;
-	position: absolute;
-	right: 16px;
-}
-
-@media(max-width:1800px) {
-	.click-img .left-heart img {
-		left: 36px;
-	}
-
-	.click-img .right-heart img {
-		right: 36px;
-	}
-}
-
-@media(max-width:1400px) {
-	.click-img .left-heart img {
-		left: 25px;
-	}
-
-	.click-img .right-heart img {
-		right: 25px;
-	}
-}
-
-@media(max-width:1000px) {
-	.click-img .left-heart img {
-		left: 20px;
-	}
-
-	.click-img .right-heart img {
-		right: 20px;
-	}
-}
-
-@media(max-width:992px) {
-	.click-img .left-heart img {
-		left: 20px;
-	}
-
-	.click-img .right-heart img {
-		right: 20px;
-	}
-}
-
-@media(max-width:650px) {
-	.click-img .left-heart img {
-		left: 13px;
-	}
-
-	.click-img .right-heart img {
-		right: 13px;
-	}
-}
-
-@media(max-width:430px) {
-	.click-img .left-heart img {
-		left: 9px;
-	}
-
-	.click-img .right-heart img {
-		right: 9px;
-	}
 }
 
 .d-none {
